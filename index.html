@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú Bar Rock</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      background: url('https://images.unsplash.com/photo-1603545829190-a6f3b9e4bbf4?auto=format&fit=crop&w=800&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1em;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .menu-buttons {
+      display: flex;
+      justify-content: space-around;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1em 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .menu-buttons button {
+      background-color: #ff0033;
+      color: white;
+      border: none;
+      padding: 0.8em 1.2em;
+      border-radius: 8px;
+      font-size: 1em;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+    .menu-buttons button:hover {
+      transform: scale(1.1);
+      background-color: #cc002a;
+    }
+    .section {
+      display: none;
+      background-color: rgba(0, 0, 0, 0.75);
+      margin: 1em;
+      padding: 1em;
+      border-radius: 10px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .section.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      border-bottom: 1px solid #fff;
+      padding-bottom: 0.5em;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 0.5em 0;
+      border-bottom: 1px solid #777;
+    }
+    .dish img, .beer img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      margin-top: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <header>Menú Rock & Bar</header>
+  <div class="menu-buttons">
+    <button onclick="showSection('comida')">Comida</button>
+    <button onclick="showSection('cervezas')">Cervezas</button>
+  </div>
+
+  <div id="comida" class="section">
+    <h2>Menú de 3 tiempos</h2>
+    <ul>
+      <li class="dish">
+        <strong>Entrada:</strong> Tartán de atún<br>
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Tartán de atún">
+      </li>
+      <li class="dish">
+        <strong>Plato principal:</strong> Lasaña<br>
+        <img src="https://media.istockphoto.com/id/1361087743/es/foto/lasa%C3%B1a-y-espinacas.webp?a=1&b=1&s=612x612&w=0&k=20&c=KyLWrao4hg4Wq9nXlqtGgRlJP1T4tvEGIo8-n0mbgT4=" alt="Lasaña">
+      </li>
+      <li class="dish">
+        <strong>Postre:</strong> Helado con panqueque<br>
+        <img src="https://media.istockphoto.com/id/1357978239/es/foto/chocolate-y-helado-de-crape.webp?a=1&b=1&s=612x612&w=0&k=20&c=Av4UEwgbj90OnYMoNpQkCktsmTkVzwXOIHvRDKBffA0=" alt="Helado con panqueque">
+      </li>
+    </ul>
+  </div>
+
+  <div id="cervezas" class="section">
+    <h2>Cervezas</h2>
+    <ul>
+      <li class="beer">Austral Calafate<br><img src="https://dashboard.dondelanegra.cl/images/products/52925_0_austral-calafate-500cc.jpg" alt="Austral Calafate"></li>
+      <li class="beer">Austral Lager<br><img src="https://sublimeat.cl/wp-content/uploads/2021/10/austral-lager.jpg" alt="Austral Lager"></li>
+      <li class="beer">Stella Artois<br><img src="https://cdnx.jumpseller.com/dc-central-distribuidora-de-licores/image/16132136/resize/1080/1080?1746723788" alt="Stella Artois"></li>
+      <li class="beer">Kunstmann Lager S/F<br><img src="https://labarraodoo.cloudccu.cl/web/image?model=product.product&id=2844&field=image_1024" alt="Kunstmann Lager S/F"></li>
+      <li class="beer">Patagonia Lager<br><img src="https://labarraodoo.cloudccu.cl/web/image?model=product.product&id=12573&field=image_1024" alt="Patagonia Lager"></li>
+      <li class="beer">Cusqueña<br><img src="https://www.labodegaperuana.cl/wp-content/uploads/2022/04/Cerveza-Cusquena.png" alt="Cusqueña"></li>
+      <li class="beer">Kross Maibock<br><img src="https://unimarc.vtexassets.com/arquivos/ids/245015/000000000000570212-DIS-01.jpg?v=638654621578230000" alt="Kross Maibock"></li>
+    </ul>
+    <h2>Cervezas para FLETOS 0% Alcohol</h2>
+    <ul>
+      <li class="beer">Kunstmann Fleto Lager Gay<br><img src="https://santaisabel.vtexassets.com/arquivos/ids/428471-900-900?width=900&height=900&aspect=true" alt="Kunstmann lager gay"></li>
+      <li class="beer">Peroni Nastro Azzurro Fleto Gay<br><img src="https://lofficinadelgusto.com/wp-content/uploads/2025/05/peroni-nastro-azzurro-00-pack.webp" alt="Peroni Nastro Azzurro gay"></li>
+      <li class="beer">Bitburger Fleto Gay<br><img src="https://www.bitburger.com/fileadmin/biere/bitburger_00_alkoholfrei/00_Alkoholfrei/drive-648x864.png" alt="Bitburger gay"></li>
+      <li class="beer">Mahou Fleto Gay<br><img src="https://unimarc.vtexassets.com/arquivos/ids/219785/000000000000652398-UN-01.jpg?v=637668121441870000" alt="Mahou gay"></li>
+    </ul>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
