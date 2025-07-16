@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menú Bar Rock</title>
-  <style>
+ <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
       color: white;
-      background: url('https://images.unsplash.com/photo-1603545829190-a6f3b9e4bbf4?auto=format&fit=crop&w=800&q=80') no-repeat center center fixed;
+      background: url('https://media.istockphoto.com/id/1328150617/es/foto/guitarrista-de-rock-tocando-la-guitarra-en-un-show-en-vivo-con-luces-de-escenario.webp?a=1&b=1&s=612x612&w=0&k=20&c=yE2EhecyST91EBkchCQtuabihoAJzDEsUtSXmx8CI2g=') no-repeat center center fixed;
       background-size: cover;
     }
     header {
@@ -27,6 +27,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      flex-wrap: wrap;
     }
     .menu-buttons button {
       background-color: #ff0033;
@@ -35,6 +36,7 @@
       padding: 0.8em 1.2em;
       border-radius: 8px;
       font-size: 1em;
+      margin: 0.2em;
       transition: transform 0.2s, background-color 0.3s;
     }
     .menu-buttons button:hover {
@@ -81,22 +83,23 @@
   <div class="menu-buttons">
     <button onclick="showSection('comida')">Comida</button>
     <button onclick="showSection('cervezas')">Cervezas</button>
+    <button onclick="showSection('bajativo')">Bajativo</button>
   </div>
 
   <div id="comida" class="section">
-    <h2>Menú de 3 tiempos</h2>
+    <h2>El Terrible Menu </h2>
     <ul>
       <li class="dish">
-        <strong>Entrada:</strong> Tartán de atún<br>
-        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Tartán de atún">
+        <strong>Entrada:</strong> Mar en terapia intensiva<br>
+        <img src="https://media.istockphoto.com/id/1312182919/es/foto/tartar-de-at%C3%BAn.webp?a=1&b=1&s=612x612&w=0&k=20&c=S49tfsTfHj45pn5V1WBGkqPLocgqmMoPU7-59KmN8as=" alt="Tartán de atún">
       </li>
       <li class="dish">
-        <strong>Plato principal:</strong> Lasaña<br>
+        <strong>Plato principal:</strong> Drama italiano en 5 actos<br>
         <img src="https://media.istockphoto.com/id/1361087743/es/foto/lasa%C3%B1a-y-espinacas.webp?a=1&b=1&s=612x612&w=0&k=20&c=KyLWrao4hg4Wq9nXlqtGgRlJP1T4tvEGIo8-n0mbgT4=" alt="Lasaña">
       </li>
       <li class="dish">
-        <strong>Postre:</strong> Helado con panqueque<br>
-        <img src="https://media.istockphoto.com/id/1357978239/es/foto/chocolate-y-helado-de-crape.webp?a=1&b=1&s=612x612&w=0&k=20&c=Av4UEwgbj90OnYMoNpQkCktsmTkVzwXOIHvRDKBffA0=" alt="Helado con panqueque">
+        <strong>Postre:</strong> Rollito celestial con corazón oscuro<br>
+        <img src="https://www.rinconmaritimo.cl/wp-content/uploads/2024/01/Unknown-8.jpeg" alt="Helado con panqueque">
       </li>
     </ul>
   </div>
@@ -114,10 +117,18 @@
     </ul>
     <h2>Cervezas para FLETOS 0% Alcohol</h2>
     <ul>
-      <li class="beer">Kunstmann Fleto Lager Gay<br><img src="https://santaisabel.vtexassets.com/arquivos/ids/428471-900-900?width=900&height=900&aspect=true" alt="Kunstmann lager gay"></li>
+      <li class="beer">Kunstmann Lager Fleto Gay<br><img src="https://santaisabel.vtexassets.com/arquivos/ids/428471-900-900?width=900&height=900&aspect=true" alt="Kunstmann lager gay"></li>
       <li class="beer">Peroni Nastro Azzurro Fleto Gay<br><img src="https://lofficinadelgusto.com/wp-content/uploads/2025/05/peroni-nastro-azzurro-00-pack.webp" alt="Peroni Nastro Azzurro gay"></li>
       <li class="beer">Bitburger Fleto Gay<br><img src="https://www.bitburger.com/fileadmin/biere/bitburger_00_alkoholfrei/00_Alkoholfrei/drive-648x864.png" alt="Bitburger gay"></li>
       <li class="beer">Mahou Fleto Gay<br><img src="https://unimarc.vtexassets.com/arquivos/ids/219785/000000000000652398-UN-01.jpg?v=637668121441870000" alt="Mahou gay"></li>
+    </ul>
+  </div>
+
+   <div id="Bajativo" class="section">
+    <h2>Bajativos</h2>
+    <ul>
+      <li class="beer">Ejemplo de bajativo 1<br><img src="#" alt="Bajativo 1"></li>
+      <li class="beer">Ejemplo de bajativo 2<br><img src="#" alt="Bajativo 2"></li>
     </ul>
   </div>
 
